@@ -10,4 +10,41 @@ use Laravel\Fortify\Features;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-require base_path('modules/Admin/Routes/web.php');
+$modules = [
+    'Admin' => [
+        'prefix' => 'admin',
+        'middleware' => ['web'],
+    ],
+
+    'Applications' => [
+        'prefix' => 'users',
+        'middleware' => ['web'],
+    ],
+    'Auth' => [
+        'prefix' => 'users',
+        'middleware' => ['web'],
+    ],
+    'Employers' => [
+        'prefix' => 'users',
+        'middleware' => ['web'],
+    ],
+    'Jobs' => [
+        'prefix' => 'users',
+        'middleware' => ['web'],
+    ],
+    'Users' => [
+        'prefix' => 'users',
+        'middleware' => ['web'],
+    ],
+];
+
+foreach ($modules as $module => $config) {
+    $routesFile = base_path("modules/{$module}/Routes/web.php");
+    if (! file_exists($routesFile)) {
+        continue;
+    }
+
+    Route::middleware($config['middleware'])
+        ->prefix($config['prefix'])
+        ->group($routesFile);
+}

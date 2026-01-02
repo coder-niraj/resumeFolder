@@ -7,6 +7,12 @@ use Illuminate\Support\Str;
 
 class Admin extends Model
 {
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'email',
+        'password',
+    ];
     public $incrementing = false;      // disable auto increment
     protected $keyType = 'string';     // key type is string (UUID)
 

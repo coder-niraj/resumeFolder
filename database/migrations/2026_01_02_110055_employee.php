@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('company_website');
             $table->string('phone_number');
             $table->string('address');
-            $table->string('status');
+            $table->boolean('status');
             $table->string('avatar')->nullable();
             $table->timestamps();
         });

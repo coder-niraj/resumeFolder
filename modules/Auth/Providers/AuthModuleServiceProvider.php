@@ -14,6 +14,6 @@ class AuthModuleServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/Views', 'auth');
+        $this->loadViewsFrom(__DIR__ . '/../Views', 'auth');
     }
 }

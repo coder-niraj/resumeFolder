@@ -1,12 +1,24 @@
 <?php
 
-namespace App\Models;
+namespace Modules\Employers\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-
-class Employers extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class Employers extends Authenticatable
 {
+     protected $fillable = [
+        'firstname',
+        'lastname',
+        'email',
+        'company_name',
+        'company_website',
+        'phone_number',
+        'phone_number',
+        'address',
+        'status',
+        'avatar'
+    ];
     public $incrementing = false;      // disable auto increment
     protected $keyType = 'string';     // key type is string (UUID)
 

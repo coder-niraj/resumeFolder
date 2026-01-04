@@ -2,7 +2,6 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-    App\Providers\FortifyServiceProvider::class,
     Modules\Admin\Providers\AdminModuleServiceProvider::class,
     Modules\Users\Providers\UserModuleServiceProvider::class,
     Modules\Applications\Providers\ApplicationModuleServiceProvider::class,

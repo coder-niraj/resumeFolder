@@ -16,10 +16,15 @@ class EmployeeAuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(! Auth::guard('employee')->check()) {
+
+        if (! Auth::guard('employee')->check()) {
             return redirect()->route('employee.login.view');
         } else {
-            return $next($request);
+            if (!Auth::guard('employee')->user()->status) {
+                return redirect()->route('employee.login.view');
+            } else {
+                return $next($request);
+            }
         }
     }
 }

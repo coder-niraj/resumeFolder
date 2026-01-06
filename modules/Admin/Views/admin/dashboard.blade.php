@@ -5,9 +5,17 @@
 @section('style')
 @endsection
 @section('content')
-
-    <div class="m-5">
-        home
+    <div class="d-flex">
+        <div class="">
+            @include('admin::components.sidebar', ['active' => 'dashboard'])
+        </div>
+        <div class="w-100 input-bg">
+            <div class="m-3 bg-white">
+                <div class="container " style="height: 95vh;border-radius: 5px;border-top: 5px solid black;">
+                    dashboard
+                </div>
+            </div>
+        </div>
     </div>
 
 @endsection

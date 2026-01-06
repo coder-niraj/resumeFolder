@@ -2,7 +2,7 @@
 
 
 use Modules\Admin\Models\Admin;
-use Modules\Employers\Models\Employers;
+use Modules\Employers\Models\Employees;
 use Modules\Users\Models\User;
 
 return [
@@ -84,7 +84,7 @@ return [
 
         'employees' => [
             'driver' => 'eloquent',
-            'model' =>Employers::class,
+            'model' => Employees::class,
         ],
     ],
 

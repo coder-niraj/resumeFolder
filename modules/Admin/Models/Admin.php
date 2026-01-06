@@ -2,6 +2,9 @@
 
 namespace Modules\Admin\Models;
 
+
+use Database\Factories\AdminFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,7 +12,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Admin extends Authenticatable
 {
-    use Notifiable;
+    use HasFactory, Notifiable;
     public $incrementing = false;      // disable auto increment
     protected $keyType = 'string';     // key type is string (UUID)
     protected $fillable = [
@@ -19,6 +22,10 @@ class Admin extends Authenticatable
         'password',
         'avatar'
     ];
+    protected static function newFactory()
+    {
+        return AdminFactory::new();
+    }
 
     protected static function boot()
     {

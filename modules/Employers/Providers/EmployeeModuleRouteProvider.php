@@ -11,6 +11,7 @@ class EmployeeModuleRouteProvider extends ServiceProvider
     {
         Route::middleware('web')
             ->prefix('employee')
+            ->name('employee.')
             ->group(__DIR__ . '/../Routes/web.php');
     }
 }

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('company_name');
             $table->string('company_website');
-            $table->string('phone_number');
+            $table->integer('phone')->nullable();
             $table->string('address');
-            $table->boolean('status');
+            $table->boolean('status')->default(false);
             $table->string('avatar')->nullable();
             $table->timestamps();
         });

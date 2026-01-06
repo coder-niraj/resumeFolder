@@ -16,8 +16,13 @@ class EmployeeGuestMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(! Auth::guard('employee')->check()) {
-             return redirect()->route('employee.dashboard');
+        if (Auth::guard('employee')->check()) {
+            if (!Auth::guard('employee')->user()->status) {
+
+                return redirect()->route('non-authorized');
+            } else {
+                return redirect()->route('employee.dashboard');
+            }
         } else {
             return $next($request);
         }

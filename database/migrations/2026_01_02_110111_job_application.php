@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('user_id');
             $table->string('job_posting_id');
             $table->string('resume_id');
-            $table->string('status');
+            $table->enum('status', ['pending', 'reviewed', 'accepted', 'rejected'])->default('pending');
             $table->string('cover_letter');
             $table->string('applied_at');
             $table->string('reviewed_at');

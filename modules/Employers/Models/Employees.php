@@ -5,16 +5,17 @@ namespace Modules\Employers\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-class Employers extends Authenticatable
+
+class Employees extends Authenticatable
 {
-     protected $fillable = [
+    protected $fillable = [
         'firstname',
         'lastname',
         'email',
         'company_name',
         'company_website',
-        'phone_number',
-        'phone_number',
+        'password',
+        'phone',
         'address',
         'status',
         'avatar'

@@ -1,0 +1,45 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Cobalt2",
+    "editor.mouseWheelZoom": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "docker.extension.enableComposeLanguageServer": false,
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "E905EE34-5C8E-40D9-AEBA-20F1858BA91E"
+        }
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.closeEmptyGroups": true,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/tmp/postman-collections-post-response.instructions.md": true,
+        "/tmp/postman-collections-pre-request.instructions.md": true,
+        "/tmp/postman-folder-post-response.instructions.md": true,
+        "/tmp/postman-folder-pre-request.instructions.md": true,
+        "/tmp/postman-http-request-post-response.instructions.md": true,
+        "/tmp/postman-http-request-pre-request.instructions.md": true
+    },
+    "window.menuBarVisibility": "compact",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 22,
+    "editor.letterSpacing": 0.2,
+    "terminal.integrated.fontSize": 14,
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "workbench.colorCustomizations": {
+        "editor.background": "#102347"
+    },
+    "postman.mcp.notifications.postmanMCP": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.openSideBySideDirection": "right",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.closeEmptyGroups": true,
+    "editor.formatOnSave": true
+}

@@ -11,9 +11,78 @@
         </div>
         <div class="w-100 input-bg">
             <div class="m-3 bg-white">
-                <div class="container " style="height: 95vh;border-radius: 5px;border-top: 5px solid black;">
-                    job list
-                </div>
+                <div class="container" style="height: 95vh;border-radius: 5px;border-top: 5px solid black;">
+                    <div class="row title">
+                        <h2>
+                            Job Post Form
+                        </h2>
+                    </div>
+                    <div class="form row">
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">Title</label>
+                                    <input type="text" class="form-control input-bg " j
+                                         name="firstname" required>
+                                </div>
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">Description</label>
+                                   ,<textarea name="" class="form-control" id=""></textarea>
+                                </div>
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">skills</label>
+                                    <input type="text" class="form-control input-bg " j
+                                         name="firstname" required>
+                                </div>
+                        
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">experience</label>
+                                    <input type="text" class="form-control input-bg " j
+                                         name="firstname" required>
+                                </div>
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">work_type</label>
+                                      <select class="form-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                        <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">job_type</label>
+                                     <select class="form-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">job_time</label>
+                                    <input type="text" class="form-control input-bg " j
+                                        name="firstname" required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">salary_min</label>
+                                    <input type="text" class="form-control input-bg " j
+                                         name="firstname" required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">salary_max</label>
+                                    <input type="text" class="form-control input-bg " j
+                                        name="firstname" required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">education</label>
+                                    <input type="text" class="form-control input-bg " j
+                                        name="firstname" required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="validationCustom01" class="form-label">ending_date</label>
+                                    <input type="text" class="form-control input-bg " j
+                                        name="firstname" required>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>

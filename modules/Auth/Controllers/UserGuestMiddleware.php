@@ -16,8 +16,12 @@ class UserGuestMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::guard('web')->check()) {
-            return redirect()->route('user.dashboard');
+        if (Auth::guard('web')->check()) {
+            if (Auth::guard('web')->user()->blocked) {
+                return redirect()->route('non-authorized');
+            } else {
+                return redirect()->route('user.dashboard');
+            }
         } else {
             return $next($request);
         }

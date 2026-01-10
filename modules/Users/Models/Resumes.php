@@ -4,13 +4,15 @@ namespace Modules\Users\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Modules\Applications\Models\JobApplications;
 
 class Resumes extends Model
 {
-      protected $fillable = [
+    protected $fillable = [
         'user_id',
         'file_path',
         'parsed_data',
+        'application_id',
         'experience_years',
         'education',
         'summary'
@@ -29,5 +31,19 @@ class Resumes extends Model
                 $model->{$model->getKeyName()} = (string) Str::uuid();
             }
         });
+    }
+    public function user()
+    {
+        return $this->belongsTo(
+            User::class,
+            'user_id'
+        );
+    }
+    public function application()
+    {
+        return $this->hasOne(
+            JobApplications::class,
+            'resume_id'
+        );
     }
 }

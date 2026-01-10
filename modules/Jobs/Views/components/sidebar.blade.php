@@ -18,9 +18,17 @@
                     Dashboard
                 </a>
             </li>
-
             <li>
                 <a href="{{ route('jobs.post') }}"
+                    class="nav-link {{ ($active ?? '') === 'job-post' ? 'active' : 'text-white' }}">
+                    <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#grid"></use>
+                    </svg>
+                    Create Job Posts
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('jobs.list.view') }}"
                     class="nav-link {{ ($active ?? '') === 'jobs' ? 'active' : 'text-white' }}">
                     <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
                         <use xlink:href="#grid"></use>

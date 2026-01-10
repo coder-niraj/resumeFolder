@@ -13,6 +13,6 @@ class UserModuleServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/Views', 'user');
+        $this->loadViewsFrom(__DIR__ . '/../Views', 'user');
     }
 }

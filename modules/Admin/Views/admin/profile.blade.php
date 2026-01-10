@@ -14,9 +14,13 @@
                 <div class="container " style="height: 95vh;border-radius: 5px;border-top: 5px solid black;">
                     <div class="profile">
                         <div class="avatar py-5 px-3 d-flex align-items-center gap-3">
-
-                            <img src="{{ asset('storage/' . $adminObj->avatar) }}" class="rounded-circle" width="120"
-                                height="120" alt="Avatar">
+                            @if ($adminObj->avatar)
+                                <img src="{{ asset('storage/' . $adminObj->avatar) }}" class="rounded-circle" width="120"
+                                    height="120" alt="Avatar">
+                            @else
+                                <img src="https://static.vecteezy.com/system/resources/previews/013/360/247/non_2x/default-avatar-photo-icon-social-media-profile-sign-symbol-vector.jpg"
+                                    class="rounded-circle" width="120" height="120">
+                            @endif
 
                             <div class="name" style="line-height: 35px;">
                                 <div class="fs-3">{{ $adminObj->firstname . ' ' . $adminObj->lastname }}</div>
@@ -32,16 +36,25 @@
                                     <label for="validationCustom01" class="form-label">First name</label>
                                     <input type="text" class="form-control input-bg " value="{{ $adminObj->firstname }}"
                                         name="firstname" required>
+                                    @error('firstname')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="col-6">
                                     <label for="validationCustom02" class="form-label">Last name</label>
                                     <input type="text" class="form-control input-bg " value="{{ $adminObj->lastname }}"
                                         name="lastname" required>
+                                    @error('lastname')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="col-6">
                                     <label for="validationCustom02" class="form-label">email</label>
                                     <input type="email" readonly class="form-control input-bg "
                                         value="{{ $adminObj->email }}" name="email">
+                                    @error('email')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
 
@@ -52,6 +65,9 @@
 
                                     <input class="form-control " style="width: 130px; opacity: 0; z-index: 10;"
                                         type="file" name="avatar">
+                                    @error('avatar')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
 
                                 </div>
                                 <div class="row py-5 px-1">

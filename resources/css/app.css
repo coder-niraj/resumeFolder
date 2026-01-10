@@ -10,7 +10,14 @@
 }
 
 
-
+.three-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* show 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
 table.dataTable thead th {
     padding: 14px 16px !important;
     vertical-align: middle;
@@ -221,6 +228,92 @@ table.dataTable tbody td {
 /* Prevent wrapping */
 #employees-table th,
 #employees-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#applicatiion-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Scroll ONLY tbody */
+#applicatiion-table tbody {
+    display: block;
+    height: 44vh;
+    /* 👈 REQUIRED */
+    overflow-y: auto;
+}
+
+/* Keep header and rows aligned */
+#applicatiion-table thead,
+#applicatiion-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Prevent wrapping */
+#applicatiion-table th,
+#applicatiion-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Scroll ONLY tbody */
+#jobs-table tbody {
+    display: block;
+    height: 44vh;
+    /* 👈 REQUIRED */
+    overflow-y: auto;
+}
+
+/* Keep header and rows aligned */
+#jobs-table thead,
+#jobs-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Prevent wrapping */
+#jobs-table th,
+#jobs-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#job-application-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Scroll ONLY tbody */
+#job-application-table tbody {
+    display: block;
+    height: 44vh;
+    /* 👈 REQUIRED */
+    overflow-y: auto;
+}
+
+/* Keep header and rows aligned */
+#job-application-table thead,
+#job-application-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Prevent wrapping */
+#job-application-table th,
+#job-application-table td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

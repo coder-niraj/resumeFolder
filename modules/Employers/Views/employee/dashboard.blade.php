@@ -7,7 +7,7 @@
 @section('content')
     <div class="d-flex">
         <div class="">
-            @include('employee::components.sidebar', ['active' => 'nothing'])
+            @include('employee::components.sidebar', ['active' => 'dashboard'])
         </div>
         <div class="w-100 input-bg">
             <div class="m-3 bg-white">

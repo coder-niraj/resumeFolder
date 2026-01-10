@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Modules\Applications\Models\JobApplications;
+use Modules\Jobs\Models\Jobs;
 
 class User extends Authenticatable
 {
@@ -66,7 +68,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
+    public function savedJobs()
+    {
+        return $this->belongsToMany(
+            Jobs::class,
+            'saved_jobs',
+            'user_id',
+            'job_id'
+        )->withTimestamps();
+    }
+    public function applications()
+    {
+        return $this->hasMany(JobApplications::class, 'user_id');
+    }
     /**
      * Get the user's initials
      */

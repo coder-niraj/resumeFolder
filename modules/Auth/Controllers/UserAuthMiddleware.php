@@ -14,13 +14,17 @@ class UserAuthMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-  
-     public function handle(Request $request, Closure $next)
+
+    public function handle(Request $request, Closure $next)
     {
-        if(! Auth::guard('web')->check()) {
+        if (! Auth::guard('web')->check()) {
             return redirect()->route('user.login.view');
         } else {
-            return $next($request);
+            if (Auth::guard('web')->user()->blocked) {
+                return redirect()->route('non-authorized');
+            } else {
+                return $next($request);
+            }
         }
     }
 }

@@ -13,6 +13,6 @@ class ApplicationModuleServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/Views', 'application');
+        $this->loadViewsFrom(__DIR__ . '/../Views', 'application');
     }
 }

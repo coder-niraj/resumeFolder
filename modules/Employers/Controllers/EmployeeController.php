@@ -27,6 +27,7 @@ class EmployeeController extends Controller
         $employeeObj = Auth::guard('employee')->user();
         return view('employee::employee.change-password', compact('employeeObj'));
     }
+
     function updateProfile(EmployeeUpdateProfileRequest $request)
     {
         $validated = $request->validated();

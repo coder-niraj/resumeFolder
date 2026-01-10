@@ -21,7 +21,7 @@ class EmployeeAuthMiddleware
             return redirect()->route('employee.login.view');
         } else {
             if (!Auth::guard('employee')->user()->status) {
-                return redirect()->route('employee.login.view');
+                return redirect()->route('non-authorized');
             } else {
                 return $next($request);
             }

@@ -1,7 +1,10 @@
 <?php
+
 namespace Modules\Users\Repositories;
-interface UserRepository{
+
+interface UserRepository
+{
     function getUser($email);
-    function updateUser($data,$column,$value);
+    function updateUser($email, $data);
     function addUser(array $data);
-} 
+}
